@@ -1,24 +1,34 @@
-import React from "react";
-import Dashboard from "../assets/Dashboard.svg";
+import Dashboard from "@/assets/Dashboard.svg";
+import Movie from "@/assets/movie.svg";
+
+import { NavLink } from "react-router";
 
 export default function DrawerMenu() {
   const MenuList = [
     {
       name: "Dashboard",
       icon: Dashboard,
+      link:'/'
     },
     {
-        name: "Dashboard",
-        icon: Dashboard,
-      },
+      name: "Movie List",
+      icon: Movie,
+      link:'/all_movies'
+    },
   ];
   return (
-    <div>
+    <div className="mx-3 ">
       {MenuList.map((item) => (
-        <div key={item.name} className="flex items-center gap-5 justify-center p-1">
-            <img src={item.icon} alt={item.icon} />
+        <NavLink to={item.link} key={item.name} 
+        className={({ isActive }) => 
+          `flex items-center gap-5 py-2 pl-3 rounded-lg mb-3 ${
+            isActive ? 'bg-[#3392ff]' : ''
+          }`
+        }        
+        >
+          <img src={item.icon} alt={item.icon} className="size-4"/>
           <p>{item.name}</p>
-        </div>
+        </NavLink>
       ))}
     </div>
   );

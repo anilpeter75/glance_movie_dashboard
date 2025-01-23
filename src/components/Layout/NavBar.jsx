@@ -1,8 +1,7 @@
-import React from "react";
-import notification from "../../assets/notification.svg";
+import notification from "@/assets/notification.svg";
 export default function NavBar() {
   return (
-    <header className="bg-primaryClr">
+    <header className="bg-primaryClr ">
       <div className="h-16 flex items-center justify-end px-10 gap-5">
         <img src={notification} alt="notification" className="h-6 w-6" />
         <div className="flex items-center gap-2">
