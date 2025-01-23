@@ -15,9 +15,9 @@ export default function RatingPieChart({ MovieData }) {
   }, [MovieData]);
 
   return (
-    <div className=" bg-widgetbgclr p-1 h-[400px] w-full rounded-lg">
+    <div className=" bg-widgetbgclr p-1  w-full rounded-lg">
       <Heading heading="IMDB Ratings Distribution" className="text-center" />
-      <ResponsiveContainer>
+      <ResponsiveContainer width="100%" height={400}>
         <PieChart>
           <Pie
             data={ratingData}

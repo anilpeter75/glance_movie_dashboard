@@ -25,7 +25,7 @@ const OscarStatistics = ({ MovieData }) => {
     <div className=" shadow rounded-lg bg-widgetbgclr p-1">
       <Heading heading="Oscar Statistics Overview" className="pl-3" />
 
-      <ResponsiveContainer width="100%" height={500}>
+      <ResponsiveContainer width="100%" height={450}>
         <BarChart
           data={oscarData}
           margin={{
