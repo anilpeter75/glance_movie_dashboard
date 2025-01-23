@@ -2,12 +2,12 @@ import MovieList from "./LatestMovieList";
 import OscarStatistics from "./OscarStatisticsBar";
 import { useFetchContext } from "@/context/FetchContext";
 import PieChart_Rating from "./Chart_RatingPie";
-import OscarWinningByYear from "./";
-
+import OscarWinningByYear from "./OscarByYear";
+import Loading from "@/components/Loading";
 export default function Home() {
   const { MovieData, error, loading } = useFetchContext();
 
-  if (loading) return <p>Loading movies...</p>;
+  if (loading) return <Loading />;
   if (error) return <p>Error: {error}</p>;
   return (
     <div className="px-5  text-white flex flex-col gap-8">

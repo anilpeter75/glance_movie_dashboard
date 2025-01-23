@@ -21,6 +21,8 @@ export const MovieFetchProvider = ({ children }) => {
         setMovieData(data);
       } catch (err) {
         setMovieData(MovieData1);
+        console.log(err);
+        
         // setError(err.message || "Failed to fetch movies.");
       } finally {
         setLoading(false);

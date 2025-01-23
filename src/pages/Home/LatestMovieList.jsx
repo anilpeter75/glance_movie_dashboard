@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import Heading from "@/components/ui/Heading";
 import ProductCard from "@/components/ui/ProductCard";
-import Button from '@/components/ui/Button'
+import Button from "@/components/ui/Button";
 export default function MovieList({ MovieData }) {
   const [sort, setSort] = useState([]);
 
@@ -19,7 +19,7 @@ export default function MovieList({ MovieData }) {
         ))}
       </div>
       <Link to="all_movies" className="flex justify-center mt-5 mb-2">
-      <Button title="Load More"/>
+        <Button title="Load More" />
       </Link>
     </div>
   );

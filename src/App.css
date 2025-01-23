@@ -9,3 +9,53 @@
 html {
   scroll-behavior: smooth;
 }
+
+.my-form {
+  --_clr-primary: #ede5e5;
+  --_clr-hover: #f33195;
+  --_clr-checked: #127acf;
+  --_clr-current: #fff;
+}
+.my-form input[type="checkbox"] {
+  appearance: none;
+  outline: none;
+  width: 1.1rem;
+  height: 1.1rem;
+  aspect-ratio: 1;
+  padding: 0.25rem;
+  background: transparent;
+  border: 1px solid var(--_clr-current);
+  border-radius: 2px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.my-form input[type="checkbox"]::after {
+  content: "\2714";
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  color: var(--_clr-checked);
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.my-form label:hover,
+.my-form input[type="checkbox"]:focus-visible,
+.my-form input[type="checkbox"]:focus-visible + label,
+.my-form input[type="checkbox"]:hover,
+.my-form input[type="checkbox"]:hover + label {
+  --_clr-current: var(--_clr-hover);
+}
+.my-form input[type="checkbox"]:focus-visible::after,
+.my-form input[type="checkbox"]:hover::after {
+  opacity: 0.5;
+  color: var(--_clr-hover);
+}
+
+.my-form input[type="checkbox"]:checked + label:not(:hover),
+.my-form input[type="checkbox"]:checked:not(:hover) {
+  --_clr-current: var(--_clr-checked);
+}
+.my-form input[type="checkbox"]:checked::after {
+  opacity: 1;
+}

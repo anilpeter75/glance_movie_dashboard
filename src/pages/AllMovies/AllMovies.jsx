@@ -3,7 +3,9 @@ import { useFetchContext } from "@/context/FetchContext";
 import Search from "@/components/ui/Search";
 import debounce from "debounce";
 import Select from "react-select";
-import ProductCard from "../../components/ui/ProductCard";
+import ProductCard from "@/components/ui/ProductCard";
+import Filtericon from "../../assets/filtericon.svg";
+import Loading from "@/components/Loading";
 
 const sort = [
   { value: "low_high", label: "Old to New" },
@@ -97,18 +99,22 @@ export default function AllMovies() {
         : [...prev[type], value],
     }));
   };
-  if (loading) return <p>Loading movies...</p>;
+  if (loading) return <Loading />;
   if (error) return <p>Error: {error}</p>;
   return (
     <>
-      <h2 className="text-4xl font-semibold mb-4 text-center">Movie List</h2>
-      <div className="grid  grid-cols-[150px_1fr] gap-4">
-        <div className="ml-3">
-          <p className="text-xl mb-4">Filters</p>
+      <h2 className="text-4xl font-semibold mb-4 text-center ">Movie List</h2>
+      <div className="grid  lg:grid-cols-[150px_1fr] grid-cols-[110px_1fr] gap-4">
+        <div className="lg:ml-3 my-form">
+          <div className="flex">
+            <p className="text-xl mb-4">Filters</p>
+            <img src={Filtericon} alt="Filtericon" className="size-8" />
+          </div>
+
           <div>
-            <p className="text-lg underline">IMDB</p>
+            <p className="text-lg underline underline-offset-4">IMDB</p>
             {filters?.imdb?.map((rating) => (
-              <div className="flex gap-2" key={rating}>
+              <div className="flex gap-3 my-1 items-center" key={rating}>
                 <input
                   type="checkbox"
                   checked={filtersValue.imdb.includes(rating)}
@@ -120,9 +126,14 @@ export default function AllMovies() {
           </div>
 
           <div className="mt-3">
-            <p className="text-xl underline">Genre</p>
+            <p
+              className="text-xl underline underline-offset-4
+"
+            >
+              Genre
+            </p>
             {filters?.gener?.map((genre) => (
-              <div className="flex gap-2" key={genre}>
+              <div className="flex gap-3 my-1 items-center" key={genre}>
                 <input
                   type="checkbox"
                   checked={filtersValue.genre.includes(genre)}
@@ -136,7 +147,7 @@ export default function AllMovies() {
 
         {/* ****** */}
         <div>
-          <div className="grid grid-cols-3 items-center gap-4">
+          <div className="grid lg:grid-cols-3 items-center gap-4">
             <Search setSearchData={setSearchData} searchData={searchData} />
             <div className=" text-black">
               <Select

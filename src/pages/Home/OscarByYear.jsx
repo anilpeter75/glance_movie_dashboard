@@ -1,5 +1,6 @@
 import { useState ,useEffect} from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,ResponsiveContainer } from "recharts";
+import Heading from "@/components/ui/Heading";
 
 
 
@@ -16,13 +17,22 @@ export default function OscarWinsLineChart({movieData}) {
             wins: yearWiseOscarWins[year],
           }));
           setOscarByYear(yearData)
-    },[])
+    },[movieData])
   return (
-    <div>
-      <h3>Oscar Wins by Year</h3>
+    <div className=" bg-widgetbgclr p-1  w-full rounded-lg">
+    <Heading heading="Oscar Wins by Year" className=" text-center" />
+      
       <ResponsiveContainer width="100%" height={400}>
       
-      <LineChart  data={oscarByYear}>
+      <LineChart  data={oscarByYear}
+      
+      margin={{
+        top: 20,
+        right: 40,
+        left: 10,
+        bottom: 10,
+      }}
+      >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="year" />
         <YAxis />
