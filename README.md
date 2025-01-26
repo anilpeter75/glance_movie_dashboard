@@ -22,10 +22,10 @@ Hosted Url- [https://glance-movie-dashboard.vercel.app/]
 - install Commands
 
 ```bash
-pnpm install, pnpm run test, pnpm run dev
+pnpm install,
+pnpm run test,
+pnpm run dev
 ```
-
-- pnpm install, pnpm run test, pnpm run dev
 
 1. Setup and Configuration:
    Initialized the project using Vite for fast development and build times.

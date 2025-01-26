@@ -6,6 +6,7 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/', // Update this to your actual base path if necessary
   plugins: [react()],
   css: {
     postcss: {
