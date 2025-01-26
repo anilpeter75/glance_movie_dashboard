@@ -7,7 +7,7 @@ Hosted Url- [https://glance-movie-dashboard.vercel.app/]
   - src: Contains the source code for the application.
   - components: Reusable UI components.
   - context: Context providers for state management.
-  - pages: Different pages of the application (Home, MovieDetails, AllMovies).
+  - pages: Different pages of the application (Home, MovieDetails, AllMovies and test files).
   - styles: Global styles and CSS files.
 
 - Key Dependencies
