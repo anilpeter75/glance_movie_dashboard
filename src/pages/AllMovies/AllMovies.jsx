@@ -5,7 +5,7 @@ import { useFetchContext } from "@/context/FetchContext";
 import Search from "@/components/ui/Search";
 import ProductCard from "@/components/ui/ProductCard";
 import Filtericon from "@/assets/filtericon.svg";
-import Loading from "@/components/Loading";
+import Loading from "@/components/ui/Loading";
 
 const sort = [
   { value: "low_high", label: "Old to New" },

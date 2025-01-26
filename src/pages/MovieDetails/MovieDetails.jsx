@@ -2,7 +2,7 @@ import Star from "@/assets/star.svg";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useFetchContext } from "@/context/FetchContext";
-import Loading from "@/components/Loading";
+import Loading from "@/components/ui/Loading";
 
 export default function MovieDetails() {
   const { MovieData, error, loading } = useFetchContext();
@@ -18,7 +18,12 @@ export default function MovieDetails() {
 
   if (loading) return <Loading text="Details" />;
   if (error) return <p>Error: {error}</p>;
-  if (!movieDetails) return <p>Movie not found</p>;
+  if (!movieDetails)
+    return (
+      <p className="h-[60vh] flex justify-center items-center">
+        Movie not found
+      </p>
+    );
 
   return (
     <div className=" mx-auto px-4 mt-5">

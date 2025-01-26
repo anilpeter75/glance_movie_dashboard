@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 import { useFetchContext } from "@/context/FetchContext";
-import Loading from "@/components/Loading";
+import Loading from "@/components/ui/Loading";
 import PieChart_Rating from "./Chart_RatingPie";
 import OscarWinningByYear from "./OscarByYear";
 const MovieList = lazy(() => import("./LatestMovieList"));

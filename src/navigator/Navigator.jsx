@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router";
 import Home from "@/pages/Home";
 import NavBar from "@/components/Layout/NavBar";
-import Loading from "@/components/Loading";
+import Loading from "@/components/ui/Loading";
 import ScrollToTop from "@/components/ScrollToTop";
 const Footer = lazy(() => import("@/components/Layout/Footer"));
 const MovieDetails = lazy(() => import("@/pages/MovieDetails/MovieDetails"));
