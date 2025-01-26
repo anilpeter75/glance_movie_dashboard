@@ -1,8 +1,9 @@
-import { render, screen } from "@testing-library/react";
+/* eslint-disable no-undef */
+import { render, screen,waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { useFetchContext } from "@/context/FetchContext";
-import Home from "./index";
 import { expect } from "vitest";
+import Home from "./index";
 
 vi.mock("@/context/FetchContext", () => ({
   useFetchContext: vi.fn(),
@@ -54,7 +55,7 @@ describe("Home Component", () => {
     ).toBeInTheDocument();
   });
 
-  it("renders movie data", () => {
+  it("renders movie data", async() => {
     useFetchContext.mockReturnValue({
       MovieData: mockMovieData,
       loading: false,
@@ -62,9 +63,11 @@ describe("Home Component", () => {
     });
 
     renderWithProviders(<Home />);
-    screen.debug();
-    // expect(screen.getByText(/oscar statistics/i)).toBeInTheDocument();
-    // expect(screen.getByText(/inception/i)).toBeInTheDocument();
-    // expect(screen.getByText(/the matrix/i)).toBeInTheDocument();
+
+
+    await waitFor(()=>{
+     expect(screen.getByText(/inception/i)).toBeInTheDocument();
+
+    })
   });
 });

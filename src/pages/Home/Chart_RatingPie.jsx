@@ -31,10 +31,7 @@ export default function RatingPieChart({ MovieData }) {
             cx="50%"
             cy="45%"
             outerRadius="55%"
-            label={({ name, value }) => (
-       
-                `${name}: ${value}`
-            )}
+            label={({ name, value }) => `${name}: ${value}`}
           >
             {ratingData.map((entry, index) => (
               <Cell

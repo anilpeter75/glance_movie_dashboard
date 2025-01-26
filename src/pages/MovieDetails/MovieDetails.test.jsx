@@ -34,7 +34,7 @@ const renderWithProviders = (ui) => {
 };
 
 describe("Movie Details Page", () => {
-  it("Display movie detials", async () => {
+  it("Display movie detials loading page", async () => {
     useFetchContext.mockReturnValue({
       MovieData: mockMovieData,
       loading: true,
