@@ -1,4 +1,4 @@
-# React + Vite
+# React + Vite + Vitest
 
 - Project Structure
   * src: Contains the source code for the application.
