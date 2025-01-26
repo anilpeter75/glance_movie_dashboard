@@ -1,8 +1,22 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Setup and Configuration:
 
-Currently, two official plugins are available:
+Initialized the project using Vite for fast development and build times.
+Configured the project structure to separate concerns and improve maintainability.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Designed reusable components such as NavBar, Footer, Loading, Heading, and ProductCard.
+Used react-router-dom for client-side routing to navigate between different pages like Home, Movie Details, and All Movies.
+
+3. State Management:
+Utilized React's Context API to manage global state, specifically for fetching and storing movie data.
+Created a FetchContext to handle data fetching and provide the data to various components.
+
+4. Responsive Design:
+Implemented responsive layouts using CSS Grid and Flexbox.
+Used media queries to adjust the layout and styles based on the screen size.
+Ensured that components like the pie chart and movie list adapt to different screen sizes.
+
+5. Lazy Loading:
+Used React's lazy and Suspense for code-splitting and lazy loading of components to improve performance.
+Displayed a loading spinner while the components are being loaded.
