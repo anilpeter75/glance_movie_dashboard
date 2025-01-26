@@ -1,8 +1,8 @@
-import Star from "@/assets/star.svg";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useFetchContext } from "@/context/FetchContext";
 import Loading from "@/components/ui/Loading";
+import Star from "@/assets/star.svg";
 
 export default function MovieDetails() {
   const { MovieData, error, loading } = useFetchContext();
