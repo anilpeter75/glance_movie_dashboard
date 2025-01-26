@@ -1,7 +1,6 @@
 # React + Vite
 
 1. Setup and Configuration:
-
 Initialized the project using Vite for fast development and build times.
 Configured the project structure to separate concerns and improve maintainability.
 
