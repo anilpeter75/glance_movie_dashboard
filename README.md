@@ -1,23 +1,22 @@
 # React + Vite
 
 - Project Structure
-  src: Contains the source code for the application.
-  components: Reusable UI components.
-  context: Context providers for state management.
-  pages: Different pages of the application (Home, MovieDetails, AllMovies).
-  styles: Global styles and CSS files.
-  utils: Utility functions and helpers.
+  * src: Contains the source code for the application.
+  * components: Reusable UI components.
+  * context: Context providers for state management.
+  * pages: Different pages of the application (Home, MovieDetails, AllMovies).
+  * styles: Global styles and CSS files.
 
 - Key Dependencies
-  React: JavaScript library for building user interfaces.
-  Vite: Fast development server and build tool.
-  react-router-dom: Client-side routing library.
-  recharts: Charting library for creating responsive charts.
-  @testing-library/react: Testing utilities for React components.
-  vitest: Testing framework for running tests.
+  * React: JavaScript library for building user interfaces.
+  * Vite: Fast development server and build tool.
+  * react-router-dom: Client-side routing library.
+  * recharts: Charting library for creating responsive charts.
+  * @testing-library/react: Testing utilities for React components.
+  * vitest: Testing framework for running tests.
 
 - Example Commands
-pnpm install, pnpm run test, pnpm run dev
+  * pnpm install, pnpm run test, pnpm run dev
 
 1. Setup and Configuration:
    Initialized the project using Vite for fast development and build times.
