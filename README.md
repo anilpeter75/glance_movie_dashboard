@@ -22,8 +22,8 @@ Hosted Url- [https://glance-movie-dashboard.vercel.app/]
 - install Commands
 
 ```bash
-pnpm install,
-pnpm run test,
+pnpm install
+pnpm run test
 pnpm run dev
 ```
 
