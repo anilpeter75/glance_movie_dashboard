@@ -1,9 +1,8 @@
 import Dashboard from "@/assets/Dashboard.svg";
 import Movie from "@/assets/movie.svg";
+import { NavLink } from "react-router-dom";
 
-import { NavLink } from "react-router";
-
-export default function DrawerMenu() {
+export default function DrawerMenu({ toggleDrawer }) {
   const MenuList = [
     {
       name: "Dashboard",
@@ -27,6 +26,7 @@ export default function DrawerMenu() {
               isActive ? "bg-[#3392ff]" : ""
             }`
           }
+          onClick={() => toggleDrawer()}
         >
           <img src={item.icon} alt={item.icon} className="size-4" />
           <p>{item.name}</p>

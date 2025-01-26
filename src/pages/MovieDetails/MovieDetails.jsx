@@ -1,23 +1,25 @@
 import Star from "@/assets/star.svg";
 import { useEffect, useState } from "react";
-import MovieData from "../../Data/MovieData";
 import { useParams } from "react-router-dom";
-
+import { useFetchContext } from "@/context/FetchContext";
+import Loading from "@/components/Loading";
 
 export default function MovieDetails() {
-  const [movieDetails, setMovieDetails] = useState({});
+  const { MovieData, error, loading } = useFetchContext();
+  const [movieDetails, setMovieDetails] = useState("");
   const { movieName } = useParams();
 
   useEffect(() => {
-    const filteredMovie = MovieData.filter(
+    const filteredMovie = MovieData?.filter(
       (movie) => movie.title.replace(/\s+/g, "_").toLowerCase() === movieName
     );
     setMovieDetails(filteredMovie[0]);
-  }, [movieName]);
+  }, [movieName, MovieData]);
 
-  if(movieDetails.cast===undefined){
-    return <p>Loading movies...</p>;
-  }
+  if (loading) return <Loading text="Details" />;
+  if (error) return <p>Error: {error}</p>;
+  if (!movieDetails) return <p>Movie not found</p>;
+
   return (
     <div className=" mx-auto px-4 mt-5">
       <div className="border-[0.5px] border-grey-300 pb-5">

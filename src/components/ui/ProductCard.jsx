@@ -1,5 +1,5 @@
 import DummyImage from "@/assets/dummyImage.png";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 export default function ProductCard({ movie }) {
   return (
     <Link

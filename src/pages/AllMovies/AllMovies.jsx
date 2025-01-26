@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useFetchContext } from "@/context/FetchContext";
-import Search from "@/components/ui/Search";
 import debounce from "debounce";
 import Select from "react-select";
+import { useFetchContext } from "@/context/FetchContext";
+import Search from "@/components/ui/Search";
 import ProductCard from "@/components/ui/ProductCard";
-import Filtericon from "../../assets/filtericon.svg";
+import Filtericon from "@/assets/filtericon.svg";
 import Loading from "@/components/Loading";
 
 const sort = [

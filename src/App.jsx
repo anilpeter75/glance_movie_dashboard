@@ -2,7 +2,6 @@ import "./App.css";
 import Drawer from "./components/Drawer/Drawer";
 import Navigator from "./navigator/Navigator";
 import { MovieFetchProvider } from "./context/FetchContext";
-
 function App() {
   return (
     <MovieFetchProvider>

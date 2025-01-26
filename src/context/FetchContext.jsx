@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import MovieData1 from "../Data/MovieData";
+
 const FetchContext = createContext();
 
 export const MovieFetchProvider = ({ children }) => {
@@ -22,7 +23,6 @@ export const MovieFetchProvider = ({ children }) => {
       } catch (err) {
         setMovieData(MovieData1);
         console.log(err);
-        
         // setError(err.message || "Failed to fetch movies.");
       } finally {
         setLoading(false);
@@ -30,7 +30,7 @@ export const MovieFetchProvider = ({ children }) => {
     };
 
     fetchMovies();
-  }, [MovieData1]);
+  }, []);
 
   return (
     <FetchContext.Provider value={{ MovieData, error, loading }}>
@@ -39,11 +39,4 @@ export const MovieFetchProvider = ({ children }) => {
   );
 };
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const useFetchContext = () => {
-  const context = useContext(FetchContext);
-  if (!context) {
-    throw new Error("useFetchContext must be used within a MovieFetchProvider");
-  }
-  return context;
-};
+export const useFetchContext = () => useContext(FetchContext);
