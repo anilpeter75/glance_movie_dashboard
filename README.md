@@ -1,49 +1,52 @@
-# React + Vite + Vitest
+# Format JSON Online
 
-Hosted Url- [https://glance-movie-dashboard.vercel.app/]
+[![Visit FormatJSONOnline.com](https://img.shields.io/badge/Visit-FormatJSONOnline.com-blue)](https://www.formatjsononline.com/)
 
-- Project Structure
+🚀 [FormatJSONOnline.com](https://www.formatjsononline.com/) is a free, fast, and secure tool to format, validate, beautify, and minify JSON data online. No signup or installation required — just paste your JSON and go.
 
-  - src: Contains the source code for the application.
-  - components: Reusable UI components.
-  - context: Context providers for state management.
-  - pages: Different pages of the application (Home, MovieDetails, AllMovies and test files).
-  - styles: Global styles and CSS files.
+---
 
-- Key Dependencies
+## ✨ Features
 
-  - React: JavaScript library for building user interfaces.
-  - Vite: Fast development server and build tool.
-  - react-router-dom: Client-side routing library.
-  - recharts: Charting library for creating responsive charts.
-  - @testing-library/react: Testing utilities for React components.
-  - vitest: Testing framework for running tests.
+- ✅ Format and beautify JSON instantly
+- ✅ Validate JSON syntax for errors
+- ✅ Minify JSON for compact output
+- ✅ Copy formatted JSON with one click
+- ✅ Dark/light mode support
+- ✅ 100% free and privacy-friendly
 
-- install Commands
+---
 
-```bash
-pnpm install
-pnpm run test
-pnpm run dev
-```
+## 📌 Use Cases
 
-1. Setup and Configuration:
-   Initialized the project using Vite for fast development and build times.
-   Configured the project structure to separate concerns and improve maintainability.
+- Debugging API responses
+- Cleaning up JSON for documentation
+- Preparing data for configuration files
+- Teaching or learning JSON formatting
 
-2. Designed reusable components such as
-   NavBar, Footer, Loading, Heading, and ProductCard.
-   Used react-router-dom for client-side routing to navigate between different pages like Home, Movie Details, and All Movies.
+---
 
-3. State Management:
-   Utilized React's Context API to manage global state, specifically for fetching and storing movie data.
-   Created a FetchContext to handle data fetching and provide the data to various components.
+## 🔗 Try it now
 
-4. Responsive Design:
-   Implemented responsive layouts using CSS Grid and Flexbox.
-   Used media queries to adjust the layout and styles based on the screen size.
-   Ensured that components like the pie chart and movie list adapt to different screen sizes.
+👉 [https://www.formatjsononline.com](https://www.formatjsononline.com)
 
-5. Lazy Loading:
-   Used React's lazy and Suspense for code-splitting and lazy loading of components to improve performance.
-   Displayed a loading spinner while the components are being loaded.
+---
+
+## 🛠 Tech Stack
+
+- React.js
+- Tailwind CSS
+- JSON.parse / JSON.stringify API
+- Hosted on Vercel
+
+---
+## 📬 Contact
+
+Made by [Anil](mailto:anilpeter75@gmail.com)  
+📨 Website: [https://www.formatjsononline.com](https://www.formatjsononline.com)
+
+---
+
+## 📄 License
+
+MIT License — free to use, modify, and distribute.
